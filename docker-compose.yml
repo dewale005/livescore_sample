@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  livescore:
+      build:
+          context: .
+      ports:
+        - "80:3000"
+      volumes:
+        - "./livescore:/app"
+      command: >
+        sh -c "npm run start:dev"
+      
